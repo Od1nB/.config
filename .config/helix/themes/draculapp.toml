@@ -1,0 +1,5 @@
+inherits = "dracula"
+"ui.background" = {}
+
+"ui.highlight.variable" = {bg="yellow"}
+"namespace" = "#5a4deb"

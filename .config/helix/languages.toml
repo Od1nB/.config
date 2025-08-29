@@ -1,0 +1,49 @@
+[language-server.gopls]
+command = "gopls"
+# args = ["-logfile=/tmp/gopls.log",  "serve"]
+staticcheck = true
+verboseOutput = true
+completeUnimported = true
+
+[language-server.gopls.config]
+"ui.diagnostic.staticcheck" = true
+"formatting.gofumpt" = true
+
+[language-server.gopls.config.hints]
+constantValues = true
+parameterNames = true
+assignVariableType = true
+rangeVariableTypes = true
+compositeLiteralTypes = true
+# compositeLiteralFields = true
+# functionTypeParameters = true
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = {command = "goimports"}
+language-servers = [ { name = "gopls" } ]
+
+[[language]]
+name = "rego"
+scope = "source.rego"
+roots = [".regal/config.yaml"]
+file-types = ["rego"]
+indent = { tab-width = 4, unit = "\t" }
+comment-token = "#"
+auto-format = true
+language-servers = [ { name = "regal" } ]
+
+[language-server.regal]
+command = "regal"
+args = ["language-server"]
+config = { provideFormatter = true }
+
+[[language]]
+name = "yaml"
+auto-format = true
+language-servers = [ { name = "yaml-language-server"}]
+
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]

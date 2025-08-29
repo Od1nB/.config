@@ -1,0 +1,49 @@
+
+theme = "draculapp"
+
+[editor]
+bufferline = "multiple"
+end-of-line-diagnostics = "hint"
+
+[editor.cursor-shape]
+insert="bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
+
+[editor.statusline]
+mode.normal = "⚡️"
+mode.insert = "🖋️"
+mode.select = "🔎"
+center = ["version-control"]
+
+# [editor.whitespace.render]
+# space = "all"
+# tab = "all"
+[editor.lsp]
+# display-signature-help-docs = false
+auto-signature-help = false
+
+[editor.whitespace.characters]
+tab = "⏩"
+
+[keys.normal]
+# Print the current line's git blame information to the statusline.
+space.B = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name}}"
+C-t = "command_mode"
+C-l = ":lsp-workspace-command"
+# Lazygit setup
+C-g = [
+    ":write-all",
+    ":insert-output lazygit >/dev/tty",
+    ":redraw",
+    ":reload-all"
+]
+C-S-w = ":set whitespace.render all" 
+
+[keys.insert]
+C-p = "signature_help"
+C-c = "normal_mode"
