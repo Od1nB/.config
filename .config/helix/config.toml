@@ -1,5 +1,4 @@
-
-theme = "draculapp"
+theme = "cygnus"
 
 [editor]
 bufferline = "multiple"
@@ -20,11 +19,7 @@ mode.insert = "🖋️"
 mode.select = "🔎"
 center = ["version-control"]
 
-# [editor.whitespace.render]
-# space = "all"
-# tab = "all"
 [editor.lsp]
-# display-signature-help-docs = false
 auto-signature-help = false
 
 [editor.whitespace.characters]

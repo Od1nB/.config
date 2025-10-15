@@ -1,0 +1,35 @@
+inherits = "dracula"
+
+"ui.background" = {}
+
+"namespace"                       = "dark_blue"
+
+"constant"                        = {fg = "light_purple"                                                          }
+"constant.builtin"                = {fg = "light_purple"                                                          }
+"constant.builtin.boolean"        = {fg = "light_purple"                                                          }
+"constant.character"              = {fg = "light_purple"                                                          }
+"constant.character.escape"       = {fg = "light_purple"                                                          }
+"constant.macro"                  = {fg = "light_purple"                                                          }
+"constant.numeric"                = {fg = "light_purple"                                                          }
+
+"string"                          = {fg = "green"                                                                           }
+"variable.parameter"              = {fg ="#cfefff", modifiers = ["italic"]                                                  }
+"variable.other"                  = {fg = "cyan"                                                                            }
+"variable.other.member"           = {fg = "foreground"                                                                      }
+
+
+"function.builtin"                = { fg = "pink"                                                                 }
+"function"                        = { fg = "dark_purple"                                                          }
+"function.call"                   = { fg = "dark_purple"                                                          }
+"function.macro"                  = { fg = "dark_purple"                                                          }
+"function.method"                 = { fg = "dark_purple"                                                          }
+
+rainbow = ["foreground", "cyan", "light_purple"]
+
+[palette]
+foreground   = "#e2d8e3"
+cyan         = "#8ffffb"
+dark_purple  = "#c16bff"
+dark_blue    = "#5a4deb"
+light_purple = "#e0b0ff"
+
