@@ -3,6 +3,8 @@ theme = "cygnus"
 [editor]
 bufferline = "multiple"
 end-of-line-diagnostics = "hint"
+rainbow-brackets = true
+completion-replace = true
 
 [editor.cursor-shape]
 insert="bar"
@@ -17,19 +19,24 @@ cursor-line = "warning" # show warnings and errors on the cursorline inline
 mode.normal = "⚡️"
 mode.insert = "🖋️"
 mode.select = "🔎"
-center = ["version-control"]
+center      = ["version-control"]
+right       = ["diagnostics", "selections", "register", "position", "total-line-numbers", "file-encoding"]
 
 [editor.lsp]
 auto-signature-help = false
-
-[editor.whitespace.characters]
-tab = "⏩"
+snippets = true
+display-messages = true
 
 [keys.normal]
-# Print the current line's git blame information to the statusline.
-space.B = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name}}"
+# Print Git show for current line
+space.B = """:echo \
+%sh{git show -s --format='%%h {%%an|%%ad}: %%s' --date=format:'%%d-%%m-%%Y' \
+$(git blame -p %{buffer_name} -L%{cursor_line},+1 | head -1 | cut -d' ' -f1)}
+"""
 C-t = "command_mode"
-C-l = ":lsp-workspace-command"
+C-r = ":config-reload"
+C-S-w = ":set whitespace.render all"
+C-p = ":sh echo %{buffer_name} | pbcopy"
 # Lazygit setup
 C-g = [
     ":write-all",
@@ -37,7 +44,19 @@ C-g = [
     ":redraw",
     ":reload-all"
 ]
-C-S-w = ":set whitespace.render all" 
+
+[keys.normal."["]
+b = "goto_previous_buffer"
+B = "goto_next_buffer"
+
+
+[keys.normal."]"]
+b = "goto_next_buffer"
+B = "goto_previous_buffer"
+
+[keys.normal.space.l]
+c = "switch_to_lowercase"
+C = "switch_to_uppercase"
 
 [keys.insert]
 C-p = "signature_help"
