@@ -65,12 +65,12 @@ config = { "provideFormatter" = true}
 [[language]]
 name = "bash"
 auto-format = true
+formatter = { command = "shfmt" }
 file-types = ["sh", {glob = ".zshrc"}, {glob = ".bashrc"}]
 
 [[language-servers.bash-lsp]]
 command = "bash-language-server"
-args = ["--stdio"]
-config = { "provideFormatter" = true}
+args = ["start"]
 
 [[language]]
 name = "hcl"
