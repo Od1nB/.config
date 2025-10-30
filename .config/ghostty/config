@@ -1,9 +1,9 @@
 
 #purple
 background=221630
-background-opacity=0.9
+background-opacity=0.95
 
-font-size=19
+font-size=12
 font-feature= -calt, -liga, -dlig
 
 keybind = super+left=goto_split:left
@@ -12,3 +12,5 @@ keybind = super+up=goto_split:top
 keybind = super+down=goto_split:bottom
 
 keybind = super+n=new_tab
+keybind = super+d=new_split:right
+keybind = super+w=close_window
