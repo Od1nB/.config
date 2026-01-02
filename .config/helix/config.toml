@@ -33,6 +33,12 @@ space.B = """:echo \
 %sh{git show -s --format='%%h {%%an|%%ad}: %%s' --date=format:'%%d-%%m-%%Y' \
 $(git blame -p %{buffer_name} -L%{cursor_line},+1 | head -1 | cut -d' ' -f1)}
 """
+space.m = [
+    ":open %sh{~/.config/helix/utils/project_switch.sh show-picker}",
+    ":change-current-directory %sh{~/.config/helix/utils/project_switch.sh}",
+    ":redraw",
+    ":reload-all"
+]
 C-t = "command_mode"
 C-r = ":config-reload"
 C-S-w = ":set whitespace.render all"
@@ -45,6 +51,10 @@ C-g = [
     ":reload-all"
 ]
 
+[keys.normal.space.l]
+c = "switch_to_lowercase"
+C = "switch_to_uppercase"
+
 [keys.normal."["]
 b = "goto_previous_buffer"
 B = "goto_next_buffer"
@@ -53,10 +63,6 @@ B = "goto_next_buffer"
 [keys.normal."]"]
 b = "goto_next_buffer"
 B = "goto_previous_buffer"
-
-[keys.normal.space.l]
-c = "switch_to_lowercase"
-C = "switch_to_uppercase"
 
 [keys.insert]
 C-p = "signature_help"
