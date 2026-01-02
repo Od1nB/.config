@@ -72,6 +72,11 @@ file-types = ["sh", {glob = ".zshrc"}, {glob = ".bashrc"}]
 command = "bash-language-server"
 args = ["start"]
 
+# [[language]]
+# name = "docker"
+# scope = "Dockerfile"
+# file-types = [ {glob = "Dockerfile*"}, {glob = "Dockerfile"}]
+
 [[language]]
 name = "hcl"
 scope = "source.hcl"
@@ -112,3 +117,12 @@ command = "~/github/ols/odinfmt"
 [[language]]
 name = "cpp"
 auto-format = true
+
+[[language]]
+name = "robot"
+auto-format = true
+# formatter = { command = "robocop", args=["format"]}
+
+[[language-servers.robotframework_ls.config.robot]]
+lint.robocop.enabled = true
+variables.execdir = "PWD_OUTPUT"
