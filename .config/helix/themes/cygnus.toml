@@ -4,25 +4,25 @@ inherits = "dracula"
 
 "namespace"                       = "dark_blue"
 
-"constant"                        = {fg = "light_purple"                                                          }
-"constant.builtin"                = {fg = "light_purple"                                                          }
-"constant.builtin.boolean"        = {fg = "light_purple"                                                          }
-"constant.character"              = {fg = "light_purple"                                                          }
-"constant.character.escape"       = {fg = "light_purple"                                                          }
-"constant.macro"                  = {fg = "light_purple"                                                          }
-"constant.numeric"                = {fg = "light_purple"                                                          }
+"constant"                        = {fg = "light_purple"                             }
+"constant.builtin"                = {fg = "light_purple"                             }
+"constant.builtin.boolean"        = {fg = "light_purple"                             }
+"constant.character"              = {fg = "light_purple"                             }
+"constant.character.escape"       = {fg = "light_purple"                             }
+"constant.macro"                  = {fg = "light_purple"                             }
+"constant.numeric"                = {fg = "light_purple"                             }
 
-"string"                          = {fg = "green"                                                                           }
-"variable.parameter"              = {fg ="#cfefff", modifiers = ["italic"]                                                  }
-"variable.other"                  = {fg = "cyan"                                                                            }
-"variable.other.member"           = {fg = "foreground"                                                                      }
+"string"                          = {fg = "green"                                    }
+"variable.parameter"              = {fg ="#cfefff", modifiers = ["italic"]           }
+"variable.other"                  = {fg = "cyan"                                     }
+"variable.other.member"           = {fg = "foreground"                               }
+"ui.highlight"                    = {underline={style="line"}, modifiers = ["italic"]}
 
-
-"function.builtin"                = { fg = "pink"                                                                 }
-"function"                        = { fg = "dark_purple"                                                          }
-"function.call"                   = { fg = "dark_purple"                                                          }
-"function.macro"                  = { fg = "dark_purple"                                                          }
-"function.method"                 = { fg = "dark_purple"                                                          }
+"function.builtin"                = {fg = "pink"                                     }
+"function"                        = {fg = "dark_purple"                              }
+"function.call"                   = {fg = "dark_purple"                              }
+"function.macro"                  = {fg = "dark_purple"                              }
+"function.method"                 = {fg = "dark_purple"                              }
 
 rainbow = ["foreground", "cyan", "light_purple"]
 

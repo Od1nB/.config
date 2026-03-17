@@ -26,6 +26,7 @@ right       = ["diagnostics", "selections", "register", "position", "total-line-
 auto-signature-help = false
 snippets = true
 display-messages = true
+auto-document-highlight = true
 
 [keys.normal]
 # Print Git show for current line
